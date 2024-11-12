@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>B-Chat</title>
+</head>
+<body>
+
+<!-- Signup/Login Page -->
+<div id="auth-container">
+    <h1>B-Chat</h1>
+    <div id="signup-form">
+        <h2>Sign Up</h2>
+        <input type="text" id="first-name" placeholder="First Name" required>
+        <input type="text" id="last-name" placeholder="Last Name" required>
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+        <button onclick="signUp()">Sign Up</button>
+    </div>
+    
+    <div id="login-form">
+        <h2>Login</h2>
+        <input type="text" id="login-username" placeholder="Username" required>
+        <input type="password" id="login-password" placeholder="Password" required>
+        <button onclick="login()">Login</button>
+        <a href="#" onclick="showForgotPassword()">Forgot Password?</a>
+    </div>
+</div>
+
+<!-- Chat Page -->
+<div id="chat-container" style="display: none;">
+    <div id="hamburger-menu">
+        <button onclick="toggleMenu()">☰</button>
+        <div id="menu-content">
+            <h3>B-Chat Family</h3>
+            <ul id="members-list"></ul>
+            <h3>Created Groups</h3>
+            <ul id="groups-list"></ul>
+            <button onclick="createGroup()">Create Group</button>
+            <h3>Trending News</h3>
+            <div id="trending-news"></div>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </div>
+
+    <div id="main-chat-room">
+        <h2>Main Chat Room</h2>
+        <textarea id="message-input"></textarea>
+        <button onclick="sendMessage()">Send</button>
+        <div id="messages"></div>
+    </div>
+
+    <!-- Secret Chat Section -->
+    <div id="secret-chats"></div>
+
+    <!-- Group Chat Section -->
+    <div id="group-chats"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
